@@ -1,0 +1,86 @@
+﻿<Page x:Name="UnitTest_Page"
+    x:Class="LC_HUB_UW8_1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LC_HUB_UW8_1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="UnitTest_Page_Loaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Hub Header="LiveCoding Hub (Unit Tests)">
+            <HubSection x:Name="HS_CodingCategory" Header="Coding Categories">
+                <DataTemplate>
+                    <Grid>
+                        <ListView x:Name="LV_Coding_Category" ItemsSource="{Binding DataSource}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Name}"></TextBlock>
+                                        <TextBlock Text="{Binding Url}"></TextBlock>
+                                        <TextBlock Text="{Binding Sort}"></TextBlock>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection x:Name="HS_Language" Header="Languages">
+                <DataTemplate>
+                    <Grid>
+                        <ListView x:Name="LV_Language" ItemsSource="{Binding DataSource}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Name}"></TextBlock>
+                                        <TextBlock Text="{Binding Url}"></TextBlock>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection x:Name="HS_LiveStream" Header="Live Stream (On Air)">
+                <DataTemplate>
+                    <Grid>
+                        <ListView x:Name="LV_LiveStream" ItemsSource="{Binding DataSource}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Title}"></TextBlock>
+                                        <TextBlock Text="{Binding User}"></TextBlock>
+                                        <TextBlock Text="{Binding UserSlug}"></TextBlock>
+                                        <TextBlock Text="{Binding ViewersLive}"></TextBlock>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+
+            <HubSection x:Name="HS_Videos" Header="User Videos List">
+                <DataTemplate>
+                    <Grid>
+                        <ListView x:Name="LV_VideoList" ItemsSource="{Binding DataSource}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Slug}"></TextBlock>
+                                        <TextBlock Text="{Binding Title}"></TextBlock>
+                                        <TextBlock Text="{Binding ViewersOverall}"></TextBlock>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+
+    </Grid>
+</Page>
