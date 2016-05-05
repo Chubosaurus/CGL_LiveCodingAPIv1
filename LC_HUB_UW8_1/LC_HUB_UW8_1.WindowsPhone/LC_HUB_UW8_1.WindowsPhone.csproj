@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>d2d41d5d-a31e-4bc2-a895-fb5814382781</ProjectGuid>
+    <ProjectGuid>{D2D41D5D-A31E-4BC2-A895-FB5814382781}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LC_HUB_UW8_1</RootNamespace>

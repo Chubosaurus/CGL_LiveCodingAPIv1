@@ -41,6 +41,9 @@ namespace CGL.LC_Models
 
         [JsonProperty("viewing_urls")]
         public List<string> ViewingUrls { get; set; }
+
+        [JsonProperty("thumbnail_url")]
+        public string ThumbnailUrl { get; set; }
     }
 
     /// <summary>

@@ -7,6 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Loaded="UnitTest_Page_Loaded">
 
+    <Page.Resources>
+        <local:StringToImageConverter x:Key="STI"></local:StringToImageConverter>
+    </Page.Resources>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Hub Header="LiveCoding Hub (Unit Tests)">
             <HubSection x:Name="HS_CodingCategory" Header="Coding Categories">
@@ -53,7 +57,8 @@
                                         <TextBlock Text="{Binding Title}"></TextBlock>
                                         <TextBlock Text="{Binding User}"></TextBlock>
                                         <TextBlock Text="{Binding UserSlug}"></TextBlock>
-                                        <TextBlock Text="{Binding ViewersLive}"></TextBlock>
+                                        <TextBlock Text="{Binding ViewersLive}"></TextBlock>                                                                                
+                                        <Image Source="{Binding ThumbnailUrl, Converter={StaticResource STI}}" Stretch="UniformToFill" Width="250" Height="140" HorizontalAlignment="Left"></Image>
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
@@ -73,6 +78,7 @@
                                         <TextBlock Text="{Binding Slug}"></TextBlock>
                                         <TextBlock Text="{Binding Title}"></TextBlock>
                                         <TextBlock Text="{Binding ViewersOverall}"></TextBlock>
+                                        <Image Source="{Binding ThumbnailUrl, Converter={StaticResource STI}}" Stretch="UniformToFill" Width="250" Height="140" HorizontalAlignment="Left"></Image>
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>

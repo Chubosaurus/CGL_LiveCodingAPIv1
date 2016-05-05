@@ -25,6 +25,7 @@ namespace CGL.LC_Models
 
         [JsonProperty("coding_category")]
         public string CodingCategory { get; set; }
+        public string Difficulty { get; set; }
         public string Language { get; set; }
         public string Tags { get; set; }
 
@@ -36,6 +37,9 @@ namespace CGL.LC_Models
 
         [JsonProperty("viewing_urls")]
         public List<string> ViewingUrls { get; set; }
+
+        [JsonProperty("thumbnail_url")]
+        public string ThumbnailUrl { get; set; }
     }
 
     /// <summary>
